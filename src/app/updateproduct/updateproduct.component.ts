@@ -8,25 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./updateproduct.component.css']
 })
 export class UpdateproductComponent implements OnInit {
-  private blouseColor=localStorage.getItem("blouseColor");
-  private blouseLength=localStorage.getItem("blouseLength");
-  private border=localStorage.getItem("border");
-  private borderType=localStorage.getItem("borderType");
-  private collectionDesc=localStorage.getItem("collectionDesc");
-  private colors=localStorage.getItem("colors");
-  private discount=localStorage.getItem("discount");
-  private fabricPurity=localStorage.getItem("fabricPurity");
-  private headerDesc=localStorage.getItem("headerDesc");
-  private inStock=localStorage.getItem("inStock");
-  private length=localStorage.getItem("length");
-  private mainImageUrl=localStorage.getItem("mainImageUrl");
-  private materialType=localStorage.getItem("materialType");
-  private occassion=localStorage.getItem("occassion");
-  private pattern=localStorage.getItem("pattern");
-  private price=localStorage.getItem("price");
-  private sku=localStorage.getItem("sku");
-  private imagePath=localStorage.getItem("imagePath");
-  private productId=localStorage.getItem("productId");
+  public blouseColor=localStorage.getItem("blouseColor");
+  public blouseLength=localStorage.getItem("blouseLength");
+  public border=localStorage.getItem("border");
+  public borderType=localStorage.getItem("borderType");
+  public collectionDesc=localStorage.getItem("collectionDesc");
+  public colors=localStorage.getItem("colors");
+  public discount=localStorage.getItem("discount");
+  public fabricPurity=localStorage.getItem("fabricPurity");
+  public headerDesc=localStorage.getItem("headerDesc");
+  public inStock=localStorage.getItem("inStock");
+  public length=localStorage.getItem("length");
+  public mainImageUrl=localStorage.getItem("mainImageUrl");
+  public materialType=localStorage.getItem("materialType");
+  public occassion=localStorage.getItem("occassion");
+  public pattern=localStorage.getItem("pattern");
+  public price=localStorage.getItem("price");
+  public sku=localStorage.getItem("sku");
+  public imagePath=localStorage.getItem("imagePath");
+  public productId=localStorage.getItem("productId");
 
   constructor(private update:ViewproductService) { }
   validation(info){

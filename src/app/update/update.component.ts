@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
-  private bannerArea=localStorage.getItem("bannerArea");
-  private bannerName=localStorage.getItem("bannerName");
-  private bannerId=localStorage.getItem("bannerId");
+  public bannerArea=localStorage.getItem("bannerArea");
+  public bannerName=localStorage.getItem("bannerName");
+  public bannerId=localStorage.getItem("bannerId");
   constructor(private view:ViewbannerService) { }
   validation=function(info){
     info.bannerId = this.bannerId;

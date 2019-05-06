@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./updateimage.component.css']
 })
 export class UpdateimageComponent implements OnInit {
-  private desc1=localStorage.getItem("desc1");
-  private desc2=localStorage.getItem("desc2");
-  private desc3=localStorage.getItem("desc3");
-  private desc4=localStorage.getItem("desc4");
-  private desc5=localStorage.getItem("desc5");
-  private header=localStorage.getItem("header");
-  private imagePath=localStorage.getItem("imagePath");
-  private imageSequenceNo=localStorage.getItem("imageSequenceNo");
-  private imageName=localStorage.getItem("imageName");
-  private imageId=localStorage.getItem("imageId");
+  public desc1=localStorage.getItem("desc1");
+  public desc2=localStorage.getItem("desc2");
+  public desc3=localStorage.getItem("desc3");
+  public desc4=localStorage.getItem("desc4");
+  public desc5=localStorage.getItem("desc5");
+  public header=localStorage.getItem("header");
+  public imagePath=localStorage.getItem("imagePath");
+  public imageSequenceNo=localStorage.getItem("imageSequenceNo");
+  public imageName=localStorage.getItem("imageName");
+  public imageId=localStorage.getItem("imageId");
   constructor(private view:ViewimageService) { }
   validation=function(info){
     info.imageId = this.imageId;

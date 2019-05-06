@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./updatecategory.component.css']
 })
 export class UpdatecategoryComponent implements OnInit {
-  private categoryName=localStorage.getItem("categoryName");
-  private description=localStorage.getItem("description");
-  private categoryId=localStorage.getItem("categoryId");
+  public categoryName=localStorage.getItem("categoryName");
+  public description=localStorage.getItem("description");
+  public categoryId=localStorage.getItem("categoryId");
   constructor(private view:ViewcategoryService,private router:Router) { }
   validation=function(info){
     info.categoryId = this.categoryId;
