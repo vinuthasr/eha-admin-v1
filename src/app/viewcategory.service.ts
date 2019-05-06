@@ -1,3 +1,4 @@
+import { BaseURL } from './../common';
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -16,7 +17,7 @@ export class ViewcategoryService {
 
   updatecategory(info) {
     console.log(info)
-    return this.http.put(`http://localhost:8080/v1/category/`, info).subscribe(result=>{
+    return this.http.put(BaseURL+ "/v1/category/", info).subscribe(result=>{
       this.router.navigate(['/view-category'])
     
      },error=>console.log('there was an error:',error));
@@ -24,14 +25,14 @@ export class ViewcategoryService {
 
 
 delete(id:number){
-  return this.http.delete(`http://localhost:8080/v1/category/` + id).subscribe(result=>{
+  return this.http.delete(BaseURL+ "/v1/category/" + id).subscribe(result=>{
     
      },error=>console.log('there was an error:',error));
 
 }
 
   getcategory(){
-    let url = 'http://localhost:8080/v1/category/all';
+    let url = BaseURL+ "/v1/category/all";
     return this.http.get(url,{ headers: this.headers}).map(data => {
       let res = data;
        console.log(res); 

@@ -1,5 +1,4 @@
-
-
+import { BaseURL } from './../common';
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -18,7 +17,7 @@ export class ViewimageService {
 
 
   getimage(){
-    let url = 'http://localhost:8080/v1/control/getall';
+    let url = BaseURL+ "/v1/control/getall";
     return this.http.get(url,{ headers: this.headers}).map(data => {
       let res = data;
        console.log(res); 
@@ -27,14 +26,14 @@ export class ViewimageService {
 }
 
 delete(id:number){
-  return this.http.delete(`http://localhost:8080/v1/control/delete/` + id).subscribe(result=>{
+  return this.http.delete(BaseURL+ "/v1/control/delete/" + id).subscribe(result=>{
     
      },error=>console.log('there was an error:',error));
 
 }
 updateimage(info) {
   console.log(info)
-  return this.http.put(`http://localhost:8080/v1/control/update/`, info).subscribe(result=>{
+  return this.http.put(BaseURL+ "/v1/control/update/", info).subscribe(result=>{
     this.router.navigate(['/viewimage'])
   
    },error=>console.log('there was an error:',error));

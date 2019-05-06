@@ -1,3 +1,4 @@
+import { BaseURL } from './../common';
 
 
 import { Injectable } from '@angular/core';
@@ -15,7 +16,7 @@ export class AddproductService {
   private headers = new Headers({ 'Content-Type': 'application/json'});
   private options = new RequestOptions({ headers: this.headers })
   private userdata = [];
-  public userurl = "http://localhost:8080/v1/upload"
+  public userurl = BaseURL+"/v1/upload"
   constructor(private http: Http, private router: Router, private route: ActivatedRoute, ) { }
   public uploadFile(fileToUpload: File) {
     const _formData = new FormData();

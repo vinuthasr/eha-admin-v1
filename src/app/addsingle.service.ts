@@ -1,3 +1,4 @@
+import { BaseURL } from './../common';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
@@ -11,7 +12,7 @@ import 'rxjs/add/observable/throw';
 })
 export class AddsingleService { 
            
-  private userURL = "http://localhost:8080/v1";
+  private userURL = BaseURL+ "/v1";
   private headers = new Headers({'Content-Type':'application/json'});
   private options = new RequestOptions({headers: this.headers})
   private userdata=[]; 

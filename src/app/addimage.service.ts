@@ -1,3 +1,4 @@
+import { BaseURL } from './../common';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
@@ -25,7 +26,7 @@ export class AddimageService {
 
     let promise = new Promise((resolve, reject) => {
       
-      return this.http.post( "http://localhost:8080/v1/control/post/ImageModel", imageadd).toPromise() .then(
+      return this.http.post( BaseURL+ "/v1/control/post/ImageModel", imageadd).toPromise() .then(
         (res:Response) => { 
             
           this.userdata = res.json();

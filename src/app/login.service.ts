@@ -1,3 +1,4 @@
+import { BaseURL } from './../common';
 
 import { Http,Headers,Response} from '@angular/http';
 import { Injectable } from '@angular/core';
@@ -9,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   providedIn: 'root'
 })
 export class LoginService {
-private userURL="http://localhost:8080/v1/signin";
+private userURL=BaseURL+ "/v1/signin";
 private headers=new Headers({'content-type':'application/json'})
 public loggedStatus=false;
 
