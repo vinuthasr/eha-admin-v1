@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { FooterComponent } from './common/footer/footer.component';
 import { HeaderComponent } from './common/header/header.component';
-// import { CategoriesComponent } from './categories/categories.component';
+import { CategoriesComponent } from './categories/categories.component';
 import { ProductsComponent } from './products/products.component';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { CustomersComponent } from './customers/customers.component';
@@ -35,7 +35,7 @@ import { CustomerlistComponent } from './customerlist/customerlist.component';
     DashboardComponent,
     FooterComponent,
     HeaderComponent,
-    // CategoriesComponent,
+     CategoriesComponent,
     ProductsComponent,
     AddProductsComponent,
     CustomersComponent,
