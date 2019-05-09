@@ -30,6 +30,8 @@ export class UpdateproductComponent implements OnInit {
 
   constructor(private update:ViewproductService) { }
   validation(info){
+    alert("hai")
+    console.log(info)
     info.productId = this.productId;
    this.update.updateproduct(info)
   }

@@ -265,12 +265,88 @@
                                                                 <label class="font-weight-bold">Border</label>
                                                                   <input type="text" class="form-control" name="borderType" #stk="ngModel"  [(ngModel)]="borderType"  placeholder="Enter border" required>
                                                               </div>             
-                                      <div class="form-group">
-                                        <button type="submit" style="margin-right: 5cm" class="btn btn-success">Update product</button>
-                                      </div>
+                                                          
+                                                              <div class="form-group">
+                                                                  <label class="font-weight-bold">Saree Length</label>
+                                                                  <input type="number" id="length" name="length" class="form-control"  fromControlName="length" placeholder="Enter length" required [(ngModel)]="length">
+                                                                  <small id="emailHelp" class="invalid-feedback">Field can't be empty</small>
+                                                                </div>
+                                                                
+                                                                <div class="form-group">
+                                                                    <label class="font-weight-bold">mainImageUrl</label>
+                                                                    <input type="text" id="mainImageUrl" name="mainImageUrl" class="form-control"  fromControlName="mainImageUrl" placeholder="Enter mainImageUrl" required [(ngModel)]="mainImageUrl">
+                                                                    <small id="emailHelp" class="invalid-feedback">Field can't be empty</small>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label class="font-weight-bold">MaterialType</label>
+                                                                      <input type="text" id="materialType" name="materialType" class="form-control"  fromControlName="materialType" placeholder="Enter materialType" required [(ngModel)]="materialType">
+                                                                      <small id="emailHelp" class="invalid-feedback">Field can't be empty</small>
+                                                                    </div>
                                     </div></div>
-                                  
-
+                                    <div class="col-lg-6">
+                                    <div class="form-group" >
+                                        <label class="font-weight-bold">BlouseColor</label>
+                                        <input type="text" id="blouseColor" name="blouseColor" class="form-control"  fromControlName="blouseColor" placeholder="Enter blouseColor" required [(ngModel)]="blouseColor">
+                                        <small id="emailHelp" class="invalid-feedback">Field can't be empty</small>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="font-weight-bold">BlouseLength</label>
+                                          <input type="number" class="form-control" name="blouseLength" [(ngModel)]="blouseLength" placeholder="Enter blouseLength" required>
+                                          <small id="emailHelp" class="invalid-feedback">Field can't be empty</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="font-weight-bold">Border</label>
+                                            <input class="form-control" name="border"  [(ngModel)]="border"    required>
+                                            <small class="invalid-feedback">
+                                                Please provide a valid Adress.
+                                              </small>
+                                          </div>
+                                          <div class="form-group">
+                                              <label class="font-weight-bold">BorderType</label>
+                                              <input class="form-control" name="borderType"  [(ngModel)]="borderType"    required>
+                                              <small class="invalid-feedback">
+                                                  Please provide a valid Adress.
+                                                </small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="font-weight-bold">colors</label>
+                                                <input class="form-control" name="colors"  [(ngModel)]="colors"    required>
+                                                <small class="invalid-feedback">
+                                                    Please provide a valid Adress.
+                                                  </small>
+                                              </div>
+                                              <div class="form-group">
+                                                  <label class="font-weight-bold">fabricPurity</label>
+                                                  <input class="form-control" name="fabricPurity"  [(ngModel)]="fabricPurity"    required>
+                                                  <small class="invalid-feedback">
+                                                      Please provide a valid Adress.
+                                                    </small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="font-weight-bold">HeaderDesc</label>
+                                                    <input class="form-control" name="headerDesc"  [(ngModel)]="headerDesc"    required>
+                                                    <small class="invalid-feedback">
+                                                        Please provide a valid Adress.
+                                                      </small>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="font-weight-bold">occassion</label>
+                                                      <input class="form-control" name="occassion"  [(ngModel)]="heaoccassionderDesc"    required>
+                                                      <small class="invalid-feedback">
+                                                          Please provide a valid Adress.
+                                                        </small>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="font-weight-bold">pattern</label>
+                                                        <input class="form-control" name="pattern"  [(ngModel)]="pattern"    required>
+                                                        <small class="invalid-feedback">
+                                                            Please provide a valid Adress.
+                                                          </small>
+                                                      </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <button type="submit" style="margin-right: 5cm" class="btn btn-success">Update product</button>
+                                            </div>
                     </div>
                     </form>
                 </div>
