@@ -11,9 +11,9 @@ import 'rxjs/add/observable/throw';
   providedIn: 'root'
 })
 export class AddproductService {
-  public headers = new Headers({ 'Content-Type': 'application/json'});
-  public options = new RequestOptions({ headers: this.headers })
-  public userdata = [];
+  private headers = new Headers({ 'Content-Type': 'application/json'});
+  private options = new RequestOptions({ headers: this.headers })
+  private userdata = [];
   public userurl = BaseURL+"/v1/upload"
   constructor(private http: Http, private router: Router, private route: ActivatedRoute, ) { }
   public uploadFile(fileToUpload: File) {
