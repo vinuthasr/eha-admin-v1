@@ -28,9 +28,9 @@ export class ViewproductService {
   }
 
   delete(id: number) {
-    return this.http.delete(BaseURL+ "/v1/deleteproduct/" + id).subscribe(result => {
+    return this.http.delete(BaseURL+ "/v1/deleteproduct/" + id)
 
-    }, error => console.log('there was an error:', error));
+    
 
   }
   updateproduct(info) {

@@ -35,16 +35,16 @@
                                    
                                   <div class="form-group">
                                     <label class="font-weight-bold">ImageSequenceNo</label>
-                                    <input type="text" id="imageSequenceNo" #seq="ngModel" style="width: 10cm" pattern="[0-9]*" name="imageSequenceNo" class="form-control"  fromControlName="imageSequenceNo" placeholder="Enter imageSequenceNo" required [(ngModel)]="imageSequenceNo">
+                                    <input type="text" id="imageSequenceNo"  style="width: 10cm"  name="imageSequenceNo" class="form-control"  fromControlName="imageSequenceNo" placeholder="Enter imageSequenceNo" required [(ngModel)]="imageSequenceNo">
                                     <small id="emailHelp" class="invalid-feedback">Field can't be empty</small>
                                   </div>
-                                  <div  *ngIf="seq?.touched ">
+                                  <!-- <div  *ngIf="seq?.touched ">
             
               <div *ngIf="seq.errors?.pattern" style="color: red">
                   imageSequenceNo must be number
                     </div>
                     
-                              </div>
+                              </div> -->
                               <div class="form-group">
                                   <label class="font-weight-bold">Header</label>
                                   <input type="text" id="header" name="header" class="form-control" style="width: 10cm" fromControlName="header" placeholder="Enter header" required [(ngModel)]="header">
@@ -72,12 +72,12 @@
                                
                                   <textarea cols="50" rows="4" name="desc4" [(ngModel)]="desc4"></textarea>
                                 </div>
-                                <h6>Description5</h6>
+                                <!-- <h6>Description5</h6>
                                 <div class="form-group">
                                
                                   <textarea cols="50" rows="4" name="desc5" [(ngModel)]="desc5"></textarea>
                                 </div>
-                               
+                                -->
     
                                  
                              

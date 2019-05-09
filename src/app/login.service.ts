@@ -35,9 +35,9 @@ if( r=="ERROR"){
   alert("invalid username/password")
 }
 else{
-  alert("hai punith ")
+  alert("Welcome to Eha")
 this.setLoggedIn(true);
-  this.router.navigate(['/dashboard']);
+  this.router.navigate(['/customerlist']);
    
 }
   })

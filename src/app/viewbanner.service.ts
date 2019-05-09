@@ -25,9 +25,7 @@ export class ViewbannerService {
 
 
 delete(id:number){
-  return this.http.delete(BaseURL+ "/v1/banner/delete/" + id).subscribe(result=>{
-    
-     },error=>console.log('there was an error:',error));
+  return this.http.delete(BaseURL+ "/v1/banner/delete/" + id)
 
 }
 

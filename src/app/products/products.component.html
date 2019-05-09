@@ -25,7 +25,7 @@
                       <th>Stock</th>
                       <th>price</th>
                       <th>Discount</th>
-                      <th>subImageList</th>
+                      <!-- <th>subImageList</th> -->
                       <th>blouseColor</th>
                       <th>blouseLength</th>
                       <th>border</th>
@@ -49,7 +49,7 @@
                         <td>{{product.inStock}}</td>
                         <td>₹ {{product.price}}</td>
                         <td>{{product.discount}}%</td>
-                        <td>{{product.subImageList}}</td>
+                        <!-- <td>{{product.subImageList}}</td> -->
                         <td>{{product.blouseColor}}</td>
                         <td>{{product.blouseLength}}</td>
                         <td>{{product.border}}</td>
@@ -67,10 +67,10 @@
                         
                       <td>
                         <a href="javascript:;" class="btn btn-primary btn-sm " (click)="editproduct(product)"  routerLink="/upadateproduct">
-                          Edit
+                          <i class="fa fa-edit"></i>
                         </a>
-                        <a href="javascript:;" class="btn btn-danger btn-sm">
-                        Delete
+                        <a href="javascript:;" class="btn btn-danger btn-sm" (click)="delete(product.productId)">
+                          <i class="fa fa-trash"></i>
                         </a>
                        
                       </td>

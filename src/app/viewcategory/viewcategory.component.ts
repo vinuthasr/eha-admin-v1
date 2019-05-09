@@ -31,11 +31,13 @@ this.view.getcategory().subscribe((data)=>{
         localStorage.setItem("categoryId", categoryId)
         this.router.navigate(['/updatecategory'])
   }
-  delete(id:number){
+  delete(id){
     alert("Are you sure ")
     console.log(id)
-    this.view.delete(id);
-    this.router.navigate(['/addcategory'])
+    this.view.delete(id).subscribe((data)=>{
+      location.reload();
+    })
+    
   }
 
   ngOnInit() {

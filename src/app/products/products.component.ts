@@ -71,4 +71,12 @@ console.log(data)
    localStorage.setItem("length", length)
    this.router.navigate(['/upadateproduct'])
   }
+  delete(id){
+    alert("are you sure")
+this.view.delete(id).subscribe((data)=>{
+  location.reload();
+})
+
+
+  }
 }

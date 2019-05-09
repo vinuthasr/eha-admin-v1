@@ -1,3 +1,4 @@
+import { CustomerlistComponent } from './customerlist/customerlist.component';
 import { AddbulkComponent } from './addbulk/addbulk.component';
 import { UpdateimageComponent } from './updateimage/updateimage.component';
 import { ViewimageComponent } from './viewimage/viewimage.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
   {path:'viewproduct/:id',component:ViewproductComponent},
   { path: 'product-orders', component: ProductOrdersComponent },
   { path: 'customers', component: CustomersComponent },
+  {path:'customerlist',component:CustomerlistComponent},
   { path: 'account', component: AccountComponent },
   { path: 'login', component: LoginComponent },
 ];

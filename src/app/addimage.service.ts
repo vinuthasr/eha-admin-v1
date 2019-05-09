@@ -39,7 +39,7 @@ export class AddimageService {
           }
           else
           {     
-        
+        alert(this.userdata['message']);
           }
          
         })

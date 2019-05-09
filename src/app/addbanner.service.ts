@@ -37,8 +37,9 @@ export class AddbannerService {
          
         }
         else
+
         {     
-        
+       alert(this.userdata['message'] )
         }
        
       })

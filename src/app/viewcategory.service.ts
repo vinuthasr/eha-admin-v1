@@ -24,10 +24,9 @@ export class ViewcategoryService {
 }
 
 
-delete(id:number){
-  return this.http.delete(BaseURL+ "/v1/category/" + id).subscribe(result=>{
-    
-     },error=>console.log('there was an error:',error));
+delete(id){
+  return this.http.delete(BaseURL+ "/v1/category/data" + id)
+     
 
 }
 

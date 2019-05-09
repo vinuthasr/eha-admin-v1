@@ -31,8 +31,10 @@ public bannerlist;
   delete(id:number){
     alert("Are you sure ")
     console.log(id)
-    this.view.delete(id);
-    this.router.navigate(['/addbanner'])
+    this.view.delete(id).subscribe((data)=>{
+      location.reload()
+    })
+ 
   
   }
   ngOnInit() {
