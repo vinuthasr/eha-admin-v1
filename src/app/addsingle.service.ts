@@ -12,10 +12,10 @@ import 'rxjs/add/observable/throw';
 })
 export class AddsingleService { 
            
-  private userURL = BaseURL+ "/v1";
-  private headers = new Headers({'Content-Type':'application/json'});
-  private options = new RequestOptions({headers: this.headers})
-  private userdata=[]; 
+  public  userURL = BaseURL+ "/v1";
+  public headers = new Headers({'Content-Type':'application/json'});
+  public options = new RequestOptions({headers: this.headers})
+  public userdata=[]; 
   
 
   constructor(private http: Http, private router: Router, private route: ActivatedRoute,) { }
