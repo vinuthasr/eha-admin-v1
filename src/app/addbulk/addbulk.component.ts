@@ -18,12 +18,23 @@ export class AddbulkComponent implements OnInit {
 
     this.add.uploadFile(fileSelected)
     .subscribe((response) => {
-       alert("file upload suceessfully")
-       this.router.navigate(['/products'])
+       
+       console.log(response)
+      //  this.router.navigate(['/products'])
+      let res1=response;
+      let status=res1._body;
+      let display=JSON.parse(status)
+      if(display.status=="SUCCESS"){
+        alert("product upload successfully")
+      }
+      else{
+        alert('error while uploading file');
+      }
+      console.log(display.status)
        return response;
      },
       (error) => {
-        alert('error while uploading file');
+        alert('error while uploading file/check categoryName and sku');
       });
       
  }

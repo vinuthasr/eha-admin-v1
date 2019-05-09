@@ -80,6 +80,7 @@ public categorylist;
     this.add.uploadFile(fileSelected)
     .subscribe((response) => {
        alert("file upload suceessfully")
+       console.log(response)
        return response;
      },
       (error) => {
