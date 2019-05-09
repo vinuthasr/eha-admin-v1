@@ -48,7 +48,12 @@ public imagelist;
     alert("Are you sure ")
     console.log(id)
     this.view.delete(id).subscribe((data)=>{
-      location.reload();
+      this.view.getimage().subscribe(data =>{
+        let res:any=data;
+        let response=JSON.parse(res._body);
+        this.imagelist=response.data;
+        console.log(this.imagelist);
+       })
     })
  
     

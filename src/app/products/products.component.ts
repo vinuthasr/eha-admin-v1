@@ -74,7 +74,12 @@ console.log(data)
   delete(id){
     alert("are you sure")
 this.view.delete(id).subscribe((data)=>{
-  location.reload();
+  this.view.getproduct().subscribe(data =>{
+    let res:any=data;
+    let response=JSON.parse(res._body);
+    this.productlist=response.data;
+    console.log(this.productlist);
+   })
 })
 
 

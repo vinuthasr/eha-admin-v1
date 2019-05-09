@@ -32,7 +32,13 @@ public bannerlist;
     alert("Are you sure ")
     console.log(id)
     this.view.delete(id).subscribe((data)=>{
-      location.reload()
+      this.view.getbanner().subscribe((data)=>{
+        let res:any=data;
+        let response=JSON.parse(res._body);
+        this.bannerlist=response.data;
+        console.log(this.bannerlist)
+      })
+      
     })
  
   
