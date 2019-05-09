@@ -1,6 +1,4 @@
 import { BaseURL } from './../common';
-
-
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
