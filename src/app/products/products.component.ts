@@ -65,6 +65,10 @@ console.log(data)
    localStorage.setItem("pattern", pattern)
    let imagePath = list.imagePath;
    localStorage.setItem("imagePath", imagePath)
+   let mainImageUrl = list.mainImageUrl;
+   localStorage.setItem("mainImageUrl", mainImageUrl)
+   let length = list.length;
+   localStorage.setItem("length", length)
    this.router.navigate(['/upadateproduct'])
   }
 }
