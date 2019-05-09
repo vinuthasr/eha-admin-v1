@@ -24,11 +24,12 @@ export class AddbulkComponent implements OnInit {
       let res1=response;
       let status=res1._body;
       let display=JSON.parse(status)
+      let err=display.message;
       if(display.status=="SUCCESS"){
         alert("product upload successfully")
       }
       else{
-        alert('error while uploading file');
+        alert(err);
       }
       console.log(display.status)
        return response;
