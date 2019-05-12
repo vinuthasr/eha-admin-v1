@@ -24,26 +24,9 @@ export class AddimageService {
   { 
     console.log(imageadd)
 
-    let promise = new Promise((resolve, reject) => {
+    
       
-      return this.http.post( BaseURL+ "/v1/control/post/ImageModel", imageadd).toPromise() .then(
-        (res:Response) => { 
-            
-          this.userdata = res.json();
-        
-          console.log(this.userdata);
-          if(this.userdata['status'] == "SUCCESS")  
-          {
-           
-           this.router.navigate(['/viewimage']);
-          }
-          else
-          {     
-        alert(this.userdata['message']);
-          }
-         
-        })
-      })
+      return this.http.post( BaseURL+ "/v1/control/post/ImageModel", imageadd)
     }
 
 

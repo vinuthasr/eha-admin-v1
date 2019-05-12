@@ -26,26 +26,6 @@ export class AddcategoryService {
 
   public addcategory(data) 
   {
-    let promise = new Promise((resolve, reject) => {
-    return this.http.post( this.userURL+'/categories ', JSON.stringify(data), { headers: this.headers}).toPromise() .then(
-      (res:Response) => { 
-      console.log(res)
-        this.userdata = res.json();
-     console.log(this.userdata);
-        console.log(this.userdata['status']);
-      
-    
-        if(this.userdata['status'] == "SUCCESS")  
-        {
-          this.router.navigate(['/view-category'])
-         
-        }
-        else
-        {     
-        
-        }
-       
-      })
-    })
+    return this.http.post( this.userURL+'/categories ', JSON.stringify(data), { headers: this.headers});
   }
 }

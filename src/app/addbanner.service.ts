@@ -20,29 +20,8 @@ export class AddbannerService {
 
   constructor(private http: Http, private router: Router, private route: ActivatedRoute,) { }
 
-  public addcategory(data) 
+  public addbanner(data) 
   {
-    let promise = new Promise((resolve, reject) => {
-    return this.http.post( this.userURL+'/banner/post ', JSON.stringify(data), { headers: this.headers}).toPromise() .then(
-      (res:Response) => { 
-      console.log(res)
-        this.userdata = res.json();
-     console.log(this.userdata);
-        console.log(this.userdata['status']);
-      
-    
-        if(this.userdata['status'] == "SUCCESS")  
-        {
-          this.router.navigate(['/viewbanner'])
-         
-        }
-        else
-
-        {     
-       alert(this.userdata['message'] )
-        }
-       
-      })
-    })
+  return this.http.post( this.userURL+'/banner/post ', JSON.stringify(data), { headers: this.headers})
   }
 }

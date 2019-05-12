@@ -2,6 +2,7 @@ import { AddimageService } from './../addimage.service';
 import { ViewbannerService } from './../viewbanner.service';
 import { Component, OnInit } from '@angular/core';
 import { ViewcategoryService } from '../viewcategory.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addimage',
@@ -11,7 +12,8 @@ import { ViewcategoryService } from '../viewcategory.service';
 export class AddimageComponent implements OnInit {
 public categorylist;
 public bannerlist;
-  constructor(private view:ViewcategoryService,private view1:ViewbannerService,private add:AddimageService) {
+public status=false
+  constructor(private view:ViewcategoryService,private view1:ViewbannerService,private add:AddimageService,private router:Router) {
     this.view.getcategory().subscribe((data)=>{
       let res:any=data;
       let response=JSON.parse(res._body);
@@ -58,7 +60,23 @@ public bannerlist;
     this.imageadd.desc3=data.desc3;
     this.imageadd.desc4=data.desc4;
     this.imageadd.desc5=data.desc5;
-        this.add.addImage1(this.imageadd);
+        this.add.addImage1(this.imageadd).subscribe((data)=>{
+        
+          let imagelist = data.json();
+          console.log(data)
+          if(imagelist['status'] == "SUCCESS")  
+          {
+            this.router.navigate(['/viewimage'])
+           
+          }
+          else
+  
+          {     
+         this.status=true
+         
+          }
+
+        })
        
       }
   ngOnInit() {

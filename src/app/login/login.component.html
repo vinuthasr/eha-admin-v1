@@ -1,8 +1,7 @@
-<style>
-  aside{
-    display: none !important;
-}
-</style>
+<span><h6 *ngIf="isLoggedInerror" class="btn btn-danger" style="margin-left:15cm">Invalid username/password</h6>
+<h6 *ngIf="isLoggedIn" class="btn btn-success" style="margin-left:15cm">Welcome to Eha</h6>
+</span>
+
 <!--RIGHT CONTENT AREA-->
 <div class="content-area">
   <div class="content-wrapper">

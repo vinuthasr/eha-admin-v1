@@ -25,24 +25,8 @@ get isLoggedIn(){
 }
 
   public addadmin(data){
-let promise=new Promise((resolve,reject)=>{
-  return this.http.post(this.userURL,JSON.stringify(data),{headers:this.headers}).toPromise().then((res:Response)=>{
 
-let result= res.json()
-sessionStorage.setItem('logincustomer',JSON.stringify(result));
-let r=result.status;
-if( r=="ERROR"){
-  alert("invalid username/password")
-}
-else{
-  alert("Welcome to Eha")
-this.setLoggedIn(true);
-  this.router.navigate(['/customerlist']);
-   
-}
-  })
-
-})
+  return this.http.post(this.userURL,JSON.stringify(data),{headers:this.headers})
   }
   
 }
