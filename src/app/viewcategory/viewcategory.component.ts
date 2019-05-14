@@ -32,10 +32,18 @@ this.view.getcategory().subscribe((data)=>{
         this.router.navigate(['/updatecategory'])
   }
   delete(id){
-    alert("Are you sure ")
+  
     console.log(id)
     this.view.delete(id).subscribe((data)=>{
-      location.reload();
+      console.log(data)
+      this.view.getcategory().subscribe((data)=>{
+        let res:any=data;
+        let response=JSON.parse(res._body);
+        this.categorylist=response.data;
+        console.log(this.categorylist)
+      })
+      
+    
     })
     
   }

@@ -1,6 +1,8 @@
+import { AuthenticationGuard } from './../authentication.guard';
 import { LoginService } from './../login.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, CanActivate } from '@angular/router';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 declare var $;
 
 @Component({
@@ -15,23 +17,23 @@ export class LoginComponent implements OnInit {
   constructor(private login:LoginService,private router:Router) { }
 post(data){
 this.login.addadmin(data).subscribe((data)=>{
-  
+  console.log(data)
 let result= data.json()
-sessionStorage.setItem('logincustomer',JSON.stringify(result));
 let r=result.status;
 if( r=="ERROR"){
   this.isLoggedInerror=true
 }
 else{
- 
 this.router.navigate(['/customerlist'])
+this.login.setloggedIn(true)
+
    
 }
 })
 }
 
   ngOnInit() {
-    // $(".sidebar").css('opacity', '0.6');
+    //  $(".sidebar").css('opacity', '0.6');
 
     // $('.header').hide();
   }

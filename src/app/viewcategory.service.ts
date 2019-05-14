@@ -25,7 +25,7 @@ export class ViewcategoryService {
 
 
 delete(id){
-  return this.http.delete(BaseURL+ "/v1/category/data" + id)
+  return this.http.delete(BaseURL+ "/v1/category/data/" + id)
      
 
 }
@@ -34,7 +34,7 @@ delete(id){
     let url = BaseURL+ "/v1/category/all";
     return this.http.get(url,{ headers: this.headers}).map(data => {
       let res = data;
-       console.log(res); 
+      
        return res;
   })
 }

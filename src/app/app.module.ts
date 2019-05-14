@@ -1,4 +1,6 @@
+import { LoginService } from './login.service';
 import { Http, HttpModule } from '@angular/http';
+import { AuthenticationGuard } from './authentication.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, PathLocationStrategy, LocationStrategy } from '@angular/common';
@@ -62,7 +64,7 @@ import { CustomerlistComponent } from './customerlist/customerlist.component';
     AppRoutingModule,HttpModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: LocationStrategy, useClass: HashLocationStrategy},AuthenticationGuard,LoginService
   ],
   bootstrap: [AppComponent]
 })

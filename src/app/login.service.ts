@@ -12,14 +12,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class LoginService {
 private userURL=BaseURL+ "/v1/signin";
 private headers=new Headers({'content-type':'application/json'})
-public loggedStatus=false;
+private loggedStatus;
 
-  constructor(private http:Http, private router: Router,private activated:ActivatedRoute) { }
+  constructor(private http:Http, private router: Router) { }
   
-setLoggedIn(value:boolean){
+  setloggedIn(value:boolean){
   this.loggedStatus=value;
 }
-get isLoggedIn(){
+get loggedIn(){
   return this.loggedStatus;
 
 }
