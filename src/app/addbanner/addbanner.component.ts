@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./addbanner.component.css']
 })
 export class AddbannerComponent implements OnInit {
-public isValid=false
+public bannerresponse;
   constructor(private add:AddbannerService,private router:Router) { }
   validation=function(data){
     console.log(data)
@@ -24,7 +24,7 @@ public isValid=false
         }
         else
         {     
-        this.isValid=true;
+        console.log(this.bannerresponse=bannerlist['message'] )
         }
     })
     

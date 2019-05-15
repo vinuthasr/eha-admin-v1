@@ -10,7 +10,7 @@
 
     <div class="content" style="width: 18cm">
                 <div class="card">
-                    <div class="card-header" class="btn btn-danger" *ngIf="status">Bannername/Categoryname not found</div>
+                    <div class="card-header" style="color: red">{{imageresponse}}</div>
                     <div class="card-body"  style="margin-left: 2cm;width: 10cm">
                       <form #form="ngForm"  (ngSubmit)="validation(form.value)">
                           <div class="form-group">

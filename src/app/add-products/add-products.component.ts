@@ -2,6 +2,7 @@ import { AddsingleService } from './../addsingle.service';
 import { AddproductService } from './../addproduct.service';
 import { Component, OnInit } from '@angular/core';
 import { ViewcategoryService } from '../viewcategory.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-products',
@@ -10,7 +11,9 @@ import { ViewcategoryService } from '../viewcategory.service';
 })
 export class AddProductsComponent implements OnInit {
 public categorylist;
-  constructor(private add:AddproductService,private view:ViewcategoryService,private single:AddsingleService) {
+public userdata;
+public productmessage;
+  constructor(private add:AddproductService,private view:ViewcategoryService,private router:Router,private single:AddsingleService) {
     this.view.getcategory().subscribe((data)=>{
       let res:any=data;
       let response=JSON.parse(res._body);
@@ -72,7 +75,24 @@ public categorylist;
     this.addproduct.categoryName=data.categoryName;
     this.addproduct.subImageList["imagePath"]=data.imagePath;
     this.addproduct.categoryName=data.categoryName;
-    this.single.addsingle(this.addproduct);
+    this.single.addsingle(this.addproduct).subscribe((data)=>{
+this.userdata=data.json();
+      if(this.userdata['status'] == "SUCCESS")  
+      {
+        this.router.navigate(['/products'])
+       
+      }
+      else
+      {     
+       console.log(this.productmessage=this.userdata['message']) 
+        
+      }
+    })
+
+
+
+
+
   }
   files: any[];
   public fileEvent($event) {

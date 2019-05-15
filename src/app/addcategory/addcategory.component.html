@@ -11,7 +11,7 @@
 
     <div class="content">
                 <div class="card">
-                    <div class="card-header" class="btn btn-danger" *ngIf="status">Category name already exist</div>
+                    <div class="card-header" style="color: red">{{CategoryMessage}}</div>
                     <div class="card-body">
                       <form #form="ngForm"  (ngSubmit)="validation(form.value)">
                         <div class="row">

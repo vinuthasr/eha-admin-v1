@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AddimageComponent implements OnInit {
 public categorylist;
 public bannerlist;
-public status=false
+public imageresponse;
   constructor(private view:ViewcategoryService,private view1:ViewbannerService,private add:AddimageService,private router:Router) {
     this.view.getcategory().subscribe((data)=>{
       let res:any=data;
@@ -70,9 +70,9 @@ public status=false
            
           }
           else
-  
+          
           {     
-         this.status=true
+         console.log(this.imageresponse=imagelist['message'])
          
           }
 

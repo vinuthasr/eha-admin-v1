@@ -11,7 +11,7 @@
 
     <div class="content">
                 <div class="card">
-                    <div class="card-header" *ngIf="isValid" class="btn btn-danger">BannerArea/BannerName is Same</div>
+                    <div class="card-header" style="color: red">{{bannerresponse}}</div>
                     <div class="card-body">
                       <form #form="ngForm"  (ngSubmit)="validation(form.value)">
                         <div class="row">

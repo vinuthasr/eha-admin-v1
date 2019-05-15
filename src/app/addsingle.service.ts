@@ -22,27 +22,10 @@ export class AddsingleService {
 
   public addsingle(data) 
   {
-    console.log(data)
-    let promise = new Promise((resolve, reject) => {
-    return this.http.post( this.userURL+'/addproduct', JSON.stringify(data), { headers: this.headers}).toPromise() .then(
-      (res:Response) => { 
-      console.log(res)
-        this.userdata = res.json();
-     console.log(this.userdata);
-        console.log(this.userdata['status']);
-      
     
-        if(this.userdata['status'] == "SUCCESS")  
-        {
-          this.router.navigate(['/products'])
-         
-        }
-        else
-        {     
-        
-        }
+    return this.http.post( this.userURL+'/addproduct', JSON.stringify(data), { headers: this.headers});
        
-      })
-    })
+      
+  
   }
 }

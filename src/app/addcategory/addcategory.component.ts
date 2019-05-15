@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./addcategory.component.css']
 })
 export class AddcategoryComponent implements OnInit {
-public status=false
+public CategoryMessage;
   constructor(private add:AddcategoryService,private router:Router) { }
   validation=function(data){
     console.log(data)
@@ -25,7 +25,7 @@ public status=false
       else
 
       {     
-     this.status=true
+     console.log(this.CategoryMessage=categorylist['message'])
      
       }
 
