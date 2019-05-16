@@ -53,10 +53,15 @@
                                     Please provide a valid Adress.
                                   </small>
                               </div>
-                              <div class="form-group">
+                                <div class="form-group">
                                   <label class="font-weight-bold">Product Color</label>
-                                  <input type="text" class="form-control" name="colors" ngModel placeholder="Enter product color" required>
-                                  <small id="emailHelp" class="invalid-feedback">Field can't be empty</small>
+                                  <select id="inputState" class="form-control" name="colors" ngModel>
+                                      <option selected>Choose...</option>
+                                      <option>Red</option>
+                                      <option>Blue</option>
+                                      <option>Green</option>
+                                      <option>Orange</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label class="font-weight-bold">Product Stock</label>
@@ -144,10 +149,16 @@
                                                         <option>Zari</option>
                                                       </select>
                                                   </div> -->
-                                                  <div class="form-group">
+                                                  
+                                                    <div class="form-group">
                                                       <label class="font-weight-bold">Blouse Color</label>
-                                                      <input type="text" class="form-control" placeholder="Enter blouse color" name="blouseColor" ngModel required>
-                                                      <small id="emailHelp" class="invalid-feedback">Field can't be empty</small>
+                                                      <select id="inputState" class="form-control" name="blouseColor" ngModel>
+                                                          <option selected>Choose...</option>
+                                                          <option>Red</option>
+                                                          <option>Blue</option>
+                                                          <option>Green</option>
+                                                          <option>Orange</option>
+                                                        </select>
                                                     </div>
                                                     <!-- <div class="form-group">
                                                         <label class="font-weight-bold">Header desc</label>

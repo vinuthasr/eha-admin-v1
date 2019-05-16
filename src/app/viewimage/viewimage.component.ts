@@ -42,6 +42,7 @@ public imagelist;
         localStorage.setItem("header", header)
         let imageId = list.imageId;
         localStorage.setItem("imageId", imageId)
+        
         this.router.navigate(['/updateimage'])
   }
   delete(id:number){

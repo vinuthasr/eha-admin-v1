@@ -14,17 +14,20 @@ declare var $;
 export class LoginComponent implements OnInit {
  public isLoggedIn=false;
  public isLoggedInerror=false;
+ public result;
   constructor(private login:LoginService,private router:Router) { }
 post(data){
 this.login.addadmin(data).subscribe((data)=>{
   console.log(data)
 let result= data.json()
+this.result=data
 let r=result.status;
 if( r=="ERROR"){
   this.isLoggedInerror=true
 }
 else{
 this.router.navigate(['/customerlist'])
+sessionStorage.setItem('loggedAdmin',this.result)
 this.login.setloggedIn(true)
 
    

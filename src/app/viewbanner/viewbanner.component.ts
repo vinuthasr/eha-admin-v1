@@ -29,7 +29,8 @@ public bannerlist;
         this.router.navigate(['/updatebanner'])
   }
   delete(id:number){
-    alert("Are you sure ")
+    window.prompt("are you sure??")
+    
     console.log(id)
     this.view.delete(id).subscribe((data)=>{
       this.view.getbanner().subscribe((data)=>{

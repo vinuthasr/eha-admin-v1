@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+   let admindetail=sessionStorage.getItem('loggedAdmin')
+   
+  }
 
   ngOnInit() {
   }
-
+  
 }

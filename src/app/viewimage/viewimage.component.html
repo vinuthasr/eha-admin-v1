@@ -21,7 +21,7 @@
               <table id="products" class="table table-striped mb-4 bg-white table-bordered">
                 <thead>
                   <tr >
-                      <th>imagesequenceno</th>
+                     
                       <th>imagepath</th>
                       <th>imagename</th>
                       <th>header</th>
@@ -29,6 +29,7 @@
                     <th>desc2</th>
                     <th>desc3</th>
                     <th>desc4</th>
+                    <th>imagesequenceno</th>
                     <!-- <th>desc5</th> -->
                    
                    
@@ -37,7 +38,7 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let image of imagelist">
-                      <td>{{image.imageSequenceNo}}</td>
+                      
                       <td>{{image.imagePath}}</td>
                       <td>{{image.imageName}}</td>
                       <td>{{image.header}}</td>
@@ -47,6 +48,7 @@
                     <td>{{image.desc3}}</td>
                    
                     <td>{{image.desc4}}</td>
+                    <td>{{image.imageSequenceNo}}</td>
                     <!-- <td>{{image.desc5}}</td> -->
                    
                    
