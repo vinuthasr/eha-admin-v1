@@ -74,6 +74,7 @@ public productmessage;
     this.addproduct.zariType=data.zariType;
     this.addproduct.categoryName=data.categoryName;
     this.addproduct.subImageList["imagePath"]=data.imagePath;
+    console.log()
     this.addproduct.categoryName=data.categoryName;
     this.single.addsingle(this.addproduct).subscribe((data)=>{
 this.userdata=data.json();

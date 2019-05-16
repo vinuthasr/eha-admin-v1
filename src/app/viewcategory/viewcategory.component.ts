@@ -9,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewcategoryComponent implements OnInit {
 public categorylist;
+public Categorydelete;
+public categorydetail;
+
   constructor(private view:ViewcategoryService,private router:Router) { 
 this.view.getcategory().subscribe((data)=>{
   let res:any=data;
@@ -36,14 +39,36 @@ this.view.getcategory().subscribe((data)=>{
     console.log(id)
     this.view.delete(id).subscribe((data)=>{
       console.log(data)
-      this.view.getcategory().subscribe((data)=>{
-        let res:any=data;
-        let response=JSON.parse(res._body);
-        this.categorylist=response.data;
-        console.log(this.categorylist)
-      })
+
+
       
+      let categorylist = data.json();
+      console.log(data)
+      if(categorylist['status'] == "SUCCESS")  
+      {
+        this.view.getcategory().subscribe((data)=>{
+          let res:any=data;
+          let response=JSON.parse(res._body);
+          this.categorylist=response.data;
+          console.log(this.categorylist)
+        })
+        
+      
+       
+      }
+      else
+
+      {     
+     this.categorydetail=this.Categorydelete=categorylist['message']
+     
+      }
+
     
+
+
+
+
+      
     })
     
   }

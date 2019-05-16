@@ -5,12 +5,13 @@
                                 
                                                           <div class="input-group mb-3" style="width: 15cm">
                                                               <div class="custom-file">
-                                                                <span><input name="file"  type="file" id="fileUpload" #inp accept=".xlsx"></span>
+                                                                <span> <input readonly> <input name="file"  type="file" placeholder="Browse" #inp accept=".xlsx"></span>
                                                               </div>
                                                             </div>
                                                             <button  class="btn btn-primary btn-sm" (click)="fileEvent(inp)"><i class="fa fa-plus mr-2"></i>Add product</button>
                                                             <a  href="https://ehaenterprise.herokuapp.com/v1/excel/template" >Download Template</a>
                                                         </div>
+
                                                         <!-- label -->
 
 <!-- 

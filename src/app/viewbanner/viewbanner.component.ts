@@ -2,6 +2,7 @@ import { ViewbannerService } from './../viewbanner.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-viewbanner',
   templateUrl: './viewbanner.component.html',
@@ -29,7 +30,7 @@ public bannerlist;
         this.router.navigate(['/updatebanner'])
   }
   delete(id:number){
-    window.prompt("are you sure??")
+  alert("are u sure")
     
     console.log(id)
     this.view.delete(id).subscribe((data)=>{

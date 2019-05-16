@@ -31,6 +31,9 @@ import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { AddbulkComponent } from './addbulk/addbulk.component';
 import { UpdateproductComponent } from './updateproduct/updateproduct.component';
 import { CustomerlistComponent } from './customerlist/customerlist.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,11 +60,11 @@ import { CustomerlistComponent } from './customerlist/customerlist.component';
     ViewproductComponent,
     AddbulkComponent,
     UpdateproductComponent,
-    CustomerlistComponent
+    CustomerlistComponent,
   ],
   imports: [
     BrowserModule,FormsModule,
-    AppRoutingModule,HttpModule
+    AppRoutingModule,HttpModule, BrowserAnimationsModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy},AuthenticationGuard,LoginService
