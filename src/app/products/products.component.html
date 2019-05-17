@@ -50,7 +50,11 @@
                         <td>{{product.inStock}}</td>
                         <td>₹ {{product.price}}</td>
                         <td>{{product.discount}}%</td>
-                        <td></td>
+                        <td>{{product.subImageList[0]?.imagePath}}
+                          {{product.subImageList[1]?.imagePath}}
+                          {{product.subImageList[2]?.imagePath}}
+                          {{product.subImageList[3]?.imagePath}}
+                        </td>
                         <td>{{product.blouseColor}}</td>
                         <td>{{product.blouseLength}}</td>
                         <td>{{product.border}}</td>

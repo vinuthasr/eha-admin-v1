@@ -63,7 +63,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerlistComponent,
   ],
   imports: [
-    BrowserModule,FormsModule,
+    BrowserModule,FormsModule, ReactiveFormsModule ,
     AppRoutingModule,HttpModule, BrowserAnimationsModule
   ],
   providers: [
