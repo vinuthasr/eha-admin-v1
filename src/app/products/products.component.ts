@@ -10,6 +10,7 @@ declare var $;
 })
 export class ProductsComponent implements OnInit {
 public productlist;
+public image;
   constructor(private view:ViewproductService,private router:Router) { 
     this.view.getproduct().subscribe(data =>{
       let res:any=data;

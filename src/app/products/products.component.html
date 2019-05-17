@@ -25,7 +25,7 @@
                       <th>Stock</th>
                       <th>price</th>
                       <th>Discount</th>
-                      <!-- <th>subImageList</th> -->
+                      <th>subImageList</th>
                       <th>blouseColor</th>
                       <th>blouseLength</th>
                       <th>border</th>
@@ -40,6 +40,7 @@
                       <th>pattern</th>
                       <th>zariType</th>
                       <th>MainimagePath</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -49,7 +50,7 @@
                         <td>{{product.inStock}}</td>
                         <td>₹ {{product.price}}</td>
                         <td>{{product.discount}}%</td>
-                        <!-- <td>{{product.subImageList}}</td> -->
+                        <td></td>
                         <td>{{product.blouseColor}}</td>
                         <td>{{product.blouseLength}}</td>
                         <td>{{product.border}}</td>
@@ -69,9 +70,9 @@
                         <a href="javascript:;" class="btn btn-primary btn-sm " (click)="editproduct(product)"  routerLink="/upadateproduct">
                           <i class="fa fa-edit"></i>
                         </a>
-                        <a href="javascript:;" class="btn btn-danger btn-sm" (click)="delete(product.productId)">
+                        <!-- <a href="javascript:;" class="btn btn-danger btn-sm" (click)="delete(product.productId)">
                           <i class="fa fa-trash"></i>
-                        </a>
+                        </a> -->
                        
                       </td>
                     </tr>

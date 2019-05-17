@@ -53,7 +53,7 @@ public productmessage;
     "zariType": "string"
   }
   validation(data){
-    console.log(data.blouseColor)
+   
     this.addproduct.blouseColor=data.blouseColor;;
     this.addproduct.blouseLength=data.blouseLength;
     this.addproduct.border=data.border;
@@ -73,14 +73,15 @@ public productmessage;
     this.addproduct.sku=data.sku;
     this.addproduct.zariType=data.zariType;
     this.addproduct.categoryName=data.categoryName;
-    this.addproduct.subImageList["imagePath"]=data.imagePath;
+    this.addproduct.subImageList[0].imagePath=data.imagePath;
     console.log()
     this.addproduct.categoryName=data.categoryName;
     this.single.addsingle(this.addproduct).subscribe((data)=>{
 this.userdata=data.json();
+console.log(this.userdata)
       if(this.userdata['status'] == "SUCCESS")  
       {
-        this.router.navigate(['/products'])
+        // this.router.navigate(['/products'])
        
       }
       else
