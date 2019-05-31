@@ -26,6 +26,9 @@ export class UpdateproductComponent implements OnInit {
   public price=localStorage.getItem("price");
   public sku=localStorage.getItem("sku");
   public imagePath=localStorage.getItem("imagePath");
+  public imagePath1=localStorage.getItem("imagePath1");
+  public imagePath2=localStorage.getItem("imagePath2");
+  public imagePath3=localStorage.getItem("imagePath3");
   public productId=localStorage.getItem("productId");
 
   constructor(private update:ViewproductService) { }

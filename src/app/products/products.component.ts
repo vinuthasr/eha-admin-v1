@@ -29,7 +29,7 @@ console.log(data)
   } );
   }
   editproduct(list){
-
+// alert("inside edit")
     let categoryName = list.categoryName;
     localStorage.setItem("categoryName", categoryName)
     let sku = list.sku;
@@ -64,13 +64,21 @@ console.log(data)
    localStorage.setItem("occassion", occassion)
    let pattern = list.pattern;
    localStorage.setItem("pattern", pattern)
-   let imagePath = list.imagePath;
+   let imagePath = list.subImageList[0].imagePath;
    localStorage.setItem("imagePath", imagePath)
+   let imagePath1 = list.subImageList[1].imagePath;
+   localStorage.setItem("imagePath1", imagePath1)
+   let imagePath2 = list.subImageList[2].imagePath;
+   localStorage.setItem("imagePath2", imagePath2)
+   let imagePath3 = list.subImageList[3].imagePath;
+   localStorage.setItem("imagePath3", imagePath3)
+   
    let mainImageUrl = list.mainImageUrl;
    localStorage.setItem("mainImageUrl", mainImageUrl)
    let length = list.length;
    localStorage.setItem("length", length)
    this.router.navigate(['/upadateproduct'])
+ 
   }
   delete(id){
     alert("are you sure")
