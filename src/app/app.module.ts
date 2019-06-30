@@ -16,7 +16,7 @@ import { CustomersComponent } from './customers/customers.component';
 import { ProductOrdersComponent } from './product-orders/product-orders.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './login/login.component';
-import {ReactiveFormsModule, FormControl, FormsModule} from '@angular/forms';
+import { ReactiveFormsModule, FormControl, FormsModule } from '@angular/forms';
 import { AuthDirective } from './auth.directive';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { ViewcategoryComponent } from './viewcategory/viewcategory.component';
@@ -33,6 +33,7 @@ import { UpdateproductComponent } from './updateproduct/updateproduct.component'
 import { CustomerlistComponent } from './customerlist/customerlist.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     FooterComponent,
     HeaderComponent,
-     CategoriesComponent,
+    CategoriesComponent,
     ProductsComponent,
     AddProductsComponent,
     CustomersComponent,
@@ -61,13 +62,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddbulkComponent,
     UpdateproductComponent,
     CustomerlistComponent,
+
   ],
   imports: [
-    BrowserModule,FormsModule, ReactiveFormsModule ,
-    AppRoutingModule,HttpModule, BrowserAnimationsModule
+    BrowserModule, FormsModule, ReactiveFormsModule,
+    AppRoutingModule, HttpModule, BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy},AuthenticationGuard,LoginService
+    { provide: LocationStrategy, useClass: HashLocationStrategy }, AuthenticationGuard, LoginService
   ],
   bootstrap: [AppComponent]
 })

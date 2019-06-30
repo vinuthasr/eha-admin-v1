@@ -1,3 +1,4 @@
+import { CategoriesService } from './../categories.service';
 import { Router } from '@angular/router';
 import { ViewcategoryService } from './../viewcategory.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,14 +13,21 @@ public categorylist;
 public Categorydelete;
 public categorydetail;
 
-  constructor(private view:ViewcategoryService,private router:Router) { 
+  constructor(private view:CategoriesService,private router:Router) { 
+// this.view.getcategory().subscribe((data)=>{
+//   // let res:any=data;
+//   // let response=JSON.parse(res._body);
+//   this.categorylist=data;
+//   console.log(this.categorylist)
+// }, err => console.log(`Somthing went wrong please try again ${err}`), ()=> console.log('complete'))
+
+
 this.view.getcategory().subscribe((data)=>{
   let res:any=data;
   let response=JSON.parse(res._body);
-  this.categorylist=response.data;
+  this.categorylist=response.data
   console.log(this.categorylist)
 })
-
 
   }
 

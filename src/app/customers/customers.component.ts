@@ -10,7 +10,7 @@ declare var $;
 export class CustomersComponent implements OnInit {
 public customerlist;
   constructor(private customer:CustomerlistService) { 
-    this.customer.getproduct().subscribe((data)=>{
+    this.customer.getcustomers().subscribe((data)=>{
       let res:any=data;
       let response=JSON.parse(res._body);
       this.customerlist=response.data;

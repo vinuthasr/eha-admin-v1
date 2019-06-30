@@ -1,3 +1,4 @@
+import { CategoriesService } from './../categories.service';
 import { AddimageService } from './../addimage.service';
 import { ViewbannerService } from './../viewbanner.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,7 @@ export class AddimageComponent implements OnInit {
 public categorylist;
 public bannerlist;
 public imageresponse;
-  constructor(private view:ViewcategoryService,private view1:ViewbannerService,private add:AddimageService,private router:Router) {
+  constructor(private view:CategoriesService,private view1:ViewbannerService,private add:AddimageService,private router:Router) {
     this.view.getcategory().subscribe((data)=>{
       let res:any=data;
       let response=JSON.parse(res._body);
