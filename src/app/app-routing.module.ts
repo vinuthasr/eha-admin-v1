@@ -1,3 +1,4 @@
+import { Test1Component } from './test1/test1.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { CustomerlistComponent } from './customerlist/customerlist.component';
 import { AddbulkComponent } from './addbulk/addbulk.component';
@@ -25,29 +26,32 @@ import { UpdatecategoryComponent } from './updatecategory/updatecategory.compone
 import { UpdateComponent } from './update/update.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { UpdateproductComponent } from './updateproduct/updateproduct.component';
+import { DikshaComponent } from './diksha/diksha.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent},
-  {path:'addbanner',component:AddbannerComponent},
-  {path:'viewbanner',component:ViewbannerComponent},
-  {path:'updatebanner',component:UpdateComponent},
-  {path:'addimage',component:AddimageComponent},
-  {path:'viewimage',component:ViewimageComponent},
-  {path:'updateimage',component:UpdateimageComponent},
-  { path: 'products', component: ProductsComponent},
-  {path:'addbulk',component:AddbulkComponent},
-  {path:'upadateproduct',component:UpdateproductComponent},
-  {path:'addcategory',component:AddcategoryComponent},
-  {path:'view-category',component:ViewcategoryComponent},
-  {path:'updatecategory',component:UpdatecategoryComponent},
-  { path: 'add-products', component: AddProductsComponent},
-  {path:'viewproduct/:id',component:ViewproductComponent},
+  { path: '', component: TestComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'diksha', component: DikshaComponent },
+  { path: 'addbanner', component: AddbannerComponent },
+  { path: 'viewbanner', component: ViewbannerComponent },
+  { path: 'updatebanner', component: UpdateComponent },
+  { path: 'addimage', component: AddimageComponent },
+  { path: 'viewimage', component: ViewimageComponent },
+  { path: 'updateimage', component: UpdateimageComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'addbulk', component: AddbulkComponent },
+  { path: 'upadateproduct', component: UpdateproductComponent },
+  { path: 'addcategory', component: AddcategoryComponent },
+  { path: 'view-category', component: ViewcategoryComponent },
+  { path: 'updatecategory', component: UpdatecategoryComponent },
+  { path: 'add-products', component: AddProductsComponent },
+  { path: 'viewproduct/:id', component: ViewproductComponent },
   { path: 'product-orders', component: ProductOrdersComponent },
   { path: 'customers', component: CustomersComponent },
-  {path:'customerlist',component:CustomerlistComponent},
+  { path: 'customerlist', component: CustomerlistComponent },
   { path: 'account', component: AccountComponent },
-
+  {path:'test1',component:Test1Component}
 ];
 
 @NgModule({

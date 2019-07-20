@@ -1,0 +1,39 @@
+<div class="mat-elevation-z8 mt-5">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Checkbox Column -->
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+     Enable Edit
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox (change)="triggerSomeEvent()">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Parameter Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef>Parameter Value</th>
+
+    <td mat-cell *matCellDef="let element">
+      <mat-form-field appearance="outline" >
+        <input matInput type="text" size="30" [disabled]="isDisabled">
+      </mat-form-field>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+  </tr>
+</table>
+
+</div>

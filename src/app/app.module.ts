@@ -1,4 +1,4 @@
-import { LoginService } from './login.service';
+
 import { Http, HttpModule } from '@angular/http';
 import { AuthenticationGuard } from './authentication.guard';
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,6 +34,19 @@ import { CustomerlistComponent } from './customerlist/customerlist.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { DikshaComponent } from './diksha/diksha.component';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+import { TestComponent } from './test/test.component';
+import { MatTableModule } from '@angular/material/table';
+
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule, MatFormFieldControl} from '@angular/material/form-field';
+import { CdkTableModule } from '@angular/cdk/table';
+import { Test1Component } from './test1/test1.component';
+import {MatSelectModule} from '@angular/material/select';
+import { MatInputModule } from '@angular/material';
+
+
 
 @NgModule({
   declarations: [
@@ -62,16 +75,20 @@ import { HttpClientModule } from '@angular/common/http';
     AddbulkComponent,
     UpdateproductComponent,
     CustomerlistComponent,
+    DikshaComponent,
+    TestComponent,
+    Test1Component,
 
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule,
     AppRoutingModule, HttpModule, BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule, Ng4LoadingSpinnerModule.forRoot(),
+    MatTableModule, MatCheckboxModule, MatFormFieldModule, CdkTableModule,MatSelectModule,MatInputModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy }, AuthenticationGuard, LoginService
+    { provide: LocationStrategy, useClass: HashLocationStrategy }, AuthenticationGuard,
   ],
   bootstrap: [AppComponent]
-})
+})  
 export class AppModule { }
